@@ -1,7 +1,16 @@
-import React from "react";
+// BlogContent.js (Child component)  
+import React from 'react';
 
 function BlogContent(props) {
-  return <div id="blog-content">{props.articleText}</div>;
+  if(!props.isPublished) {
+    return null;
+  }
+
+  return (
+    <div>
+      {props.articleText} 
+    </div>
+  ); 
 }
 
 export default BlogContent;
